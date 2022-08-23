@@ -2,15 +2,15 @@
 //allow us to pass a json schema and we are going to get a typesafe
 //our application wont start if it is missing a env variable
 //it ensure typesafe
-import { envSchema } from "env-schema";
-import { Type, Static } from "@sinclair/typebox";
+import { envSchema } from 'env-schema';
+import { Type, Static } from '@sinclair/typebox';
 
 const schema = Type.Object({
   PORT: Type.Number({
     default: 4000,
   }),
   HOST: Type.String({
-    default: "0.0.0.0",
+    default: '0.0.0.0',
   }),
   DATABASE_URL: Type.String(),
 });
